@@ -2233,11 +2233,7 @@
         "returnToCustomerPackageDetails"
       ],
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/JobDetails"
-        }
-      ],
+      "$ref": "#/definitions/JobDetails",
       "properties": {
         "importDiskDetailsCollection": {
           "description": "Contains the map of disk serial number to the disk details for import jobs.",
@@ -4985,7 +4981,6 @@
           "description": "Serial number and the customer resolution code corresponding to each serial number",
           "type": "object",
           "additionalProperties": {
-            "format": "int32",
             "description": "Available customer resolution codes on a job",
             "enum": [
               "None",
