@@ -2233,7 +2233,11 @@
         "returnToCustomerPackageDetails"
       ],
       "type": "object",
-      "$ref": "#/definitions/JobDetails",
+      "allOf": [
+        {
+          "$ref": "#/definitions/JobDetails"
+        }
+      ],
       "properties": {
         "importDiskDetailsCollection": {
           "description": "Contains the map of disk serial number to the disk details for import jobs.",
