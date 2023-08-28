@@ -555,24 +555,14 @@
         },
         "settings": {
           "type": "object",
-          "description": "Json formatted public settings for the extension.",
-          "properties": {
-            "workspaceId": {
-              "description": "Workspace Id.",
-              "type": "string"
-            }
-          }
+          "additionalProperties": true,
+          "description": "Json formatted public settings for the extension."
         },
         "protectedSettings": {
           "type": "object",
+          "additionalProperties": true,
           "description": "Protected settings (may contain secrets).",
-          "x-ms-secret": true,
-          "properties": {
-            "workspaceKey": {
-              "description": "Workspace Key.",
-              "type": "string"
-            }
-          }
+          "x-ms-secret": true
         },
         "enableAutomaticUpgrade": {
           "type": "boolean",
