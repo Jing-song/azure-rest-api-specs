@@ -619,7 +619,8 @@
         },
         "properties": {
           "description": "Additional properties for the specific resource provider.",
-          "type": "object"
+          "type": "object",
+          "additionalProperties": true
         }
       }
     },
@@ -699,7 +700,8 @@
         },
         "properties": {
           "description": "Additional properties for the specific resource provider.",
-          "type": "object"
+          "type": "object",
+          "additionalProperties": true
         }
       }
     },
@@ -1009,7 +1011,8 @@
         },
         "properties": {
           "description": "Additional properties for the specific resource provider.",
-          "type": "object"
+          "type": "object",
+          "additionalProperties": true
         }
       }
     },
@@ -1150,7 +1153,8 @@
         },
         "properties": {
           "description": "Additional properties for the specific resource provider.",
-          "type": "object"
+          "type": "object",
+          "additionalProperties": true
         }
       }
     },
