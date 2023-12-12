@@ -413,8 +413,7 @@
         },
         "extensionParameters": {
           "description": "Parameters specific to this extension type.",
-          "$ref": "#/definitions/ExtensionParameters",
-          "x-ms-client-flatten": true
+          "$ref": "#/definitions/ExtensionParameters"
         },
         "aggregateState": {
           "description": "Aggregate state of Arc Extensions across the nodes in this HCI cluster.",
@@ -600,10 +599,12 @@
         },
         "settings": {
           "type": "object",
+          "additionalProperties": true,
           "description": "Json formatted public settings for the extension."
         },
         "protectedSettings": {
           "type": "object",
+          "additionalProperties": true,
           "description": "Protected settings (may contain secrets).",
           "x-ms-secret": true
         },
