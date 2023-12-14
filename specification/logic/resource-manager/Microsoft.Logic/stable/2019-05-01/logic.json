@@ -6548,14 +6548,13 @@
         },
         "definition": {
           "$ref": "#/definitions/Object",
+          "additionalProperties": true,
           "description": "The definition."
         },
         "parameters": {
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/definitions/WorkflowParameter"
-          },
-          "description": "The parameters."
+          "$ref": "#/definitions/Object",
+          "description": "The parameters.",
+          "additionalProperties": true
         }
       },
       "description": "The workflow properties."
@@ -6656,13 +6655,12 @@
         },
         "definition": {
           "$ref": "#/definitions/Object",
+          "additionalProperties": true,
           "description": "The definition."
         },
         "parameters": {
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/definitions/WorkflowParameter"
-          },
+          "$ref": "#/definitions/Object",
+          "additionalProperties": true,
           "description": "The parameters."
         }
       },
