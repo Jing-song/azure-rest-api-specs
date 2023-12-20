@@ -336,12 +336,6 @@
             "create",
             "read"
           ]
-        },
-        "tags": {
-          "additionalProperties": {
-            "type": "string"
-          },
-          "description": "Resource tags"
         }
       },
       "x-ms-azure-resource": true,

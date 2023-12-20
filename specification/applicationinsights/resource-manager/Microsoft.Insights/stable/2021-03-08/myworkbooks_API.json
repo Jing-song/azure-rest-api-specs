@@ -356,12 +356,6 @@
             "read"
           ]
         },
-        "tags": {
-          "additionalProperties": {
-            "type": "string"
-          },
-          "description": "Resource tags"
-        },
         "etag": {
           "additionalProperties": {
             "type": "string"
@@ -461,10 +455,6 @@
           "description": "Unique user id of the specific user that owns this private workbook.",
           "readOnly": true
         },
-        "sourceId": {
-          "type": "string",
-          "description": "Optional resourceId for a source resource."
-        },
         "storageUri": {
           "type": "string",
           "x-nullable": true,
@@ -494,7 +484,8 @@
           "type": "string",
           "readOnly": true
         },
-        "innererror": {
+        "innerError": {
+          "type": "array",
           "description": "Internal error details.",
           "items": {
             "$ref": "#/definitions/InnerErrorTrace"

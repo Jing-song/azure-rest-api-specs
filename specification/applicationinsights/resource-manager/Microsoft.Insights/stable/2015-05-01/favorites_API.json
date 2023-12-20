@@ -82,9 +82,9 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/favorites/{favoriteId}": {
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/components/{resourceName}/favorites/{favoriteName}": {
       "get": {
-        "description": "Get a single favorite by its FavoriteId, defined within an Application Insights component.",
+        "description": "Get a single favorite by its FavoriteName, defined within an Application Insights component.",
         "operationId": "Favorites_Get",
         "parameters": [
           {
@@ -100,7 +100,7 @@
             "$ref": "#/parameters/ResourceNameParameter"
           },
           {
-            "$ref": "#/parameters/FavoriteIdParameter"
+            "$ref": "#/parameters/FavoriteNameParameter"
           }
         ],
         "responses": {
@@ -134,7 +134,7 @@
             "$ref": "#/parameters/ResourceNameParameter"
           },
           {
-            "$ref": "#/parameters/FavoriteIdParameter"
+            "$ref": "#/parameters/FavoriteNameParameter"
           },
           {
             "name": "favoriteProperties",
@@ -177,7 +177,7 @@
             "$ref": "#/parameters/ResourceNameParameter"
           },
           {
-            "$ref": "#/parameters/FavoriteIdParameter"
+            "$ref": "#/parameters/FavoriteNameParameter"
           },
           {
             "name": "favoriteProperties",
@@ -220,7 +220,7 @@
             "$ref": "#/parameters/ResourceNameParameter"
           },
           {
-            "$ref": "#/parameters/FavoriteIdParameter"
+            "$ref": "#/parameters/FavoriteNameParameter"
           }
         ],
         "responses": {
@@ -240,7 +240,7 @@
     "ApplicationInsightsComponentFavorite": {
       "description": "Properties that define a favorite that is associated to an Application Insights component.",
       "properties": {
-        "Name": {
+        "FName": {
           "type": "string",
           "description": "The user-defined name of the favorite."
         },
@@ -254,8 +254,7 @@
         },
         "FavoriteId": {
           "type": "string",
-          "description": "Internally assigned unique id of the favorite definition.",
-          "readOnly": true
+          "description": "Internally assigned unique id of the favorite definition."
         },
         "FavoriteType": {
           "description": "Enum indicating if this favorite definition is owned by a specific user or is shared between all users with access to the Application Insights component.",
@@ -327,8 +326,8 @@
       "description": "The type of favorite. Value can be either shared or user.",
       "x-ms-parameter-location": "method"
     },
-    "FavoriteIdParameter": {
-      "name": "favoriteId",
+    "FavoriteNameParameter": {
+      "name": "favoriteName",
       "in": "path",
       "required": true,
       "type": "string",
