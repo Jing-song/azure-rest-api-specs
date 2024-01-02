@@ -527,21 +527,10 @@
           "type": "string",
           "description": "Workbook category, as defined by the user at creation time."
         },
-        "tags": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Being deprecated, please use the other tags field"
-        },
         "userId": {
           "type": "string",
           "description": "Unique user id of the specific user that owns this workbook.",
           "readOnly": true
-        },
-        "sourceId": {
-          "type": "string",
-          "description": "ResourceId for a source resource."
         },
         "storageUri": {
           "type": "string",
@@ -576,18 +565,6 @@
             "modelAsString": true
           }
         },
-        "tags": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "x-ms-mutability": [
-            "read",
-            "create",
-            "update"
-          ],
-          "description": "Resource tags."
-        },
         "properties": {
           "x-ms-client-flatten": true,
           "description": "Metadata describing a workbook for an Azure resource.",
@@ -610,13 +587,6 @@
         "category": {
           "type": "string",
           "description": "Workbook category, as defined by the user at creation time."
-        },
-        "tags": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "A list of 0 or more tags that are associated with this workbook definition"
         },
         "description": {
           "type": "string",
