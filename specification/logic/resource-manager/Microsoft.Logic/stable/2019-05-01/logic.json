@@ -9764,8 +9764,9 @@
           "description": "The changed time."
         },
         "metadata": {
-          "type": "object",
+          "$ref": "#/definitions/Object",
           "description": "The metadata.",
+          "additionalProperties": true,
           "properties": {}
         },
         "content": {
@@ -12189,6 +12190,7 @@
         },
         "content": {
           "$ref": "#/definitions/Object",
+          "additionalProperties": true,
           "description": "The session content."
         }
       },
@@ -12878,7 +12880,10 @@
       "additionalProperties": false,
       "description": "The artifact content properties definition.",
       "properties": {
-        "content": {},
+        "content": {
+          "type": "string",
+          "description": "The content."
+        },
         "contentType": {
           "type": "string",
           "description": "The content type."
@@ -12909,7 +12914,10 @@
           "format": "date-time",
           "description": "The artifact changed time."
         },
-        "metadata": {}
+        "metadata": {
+          "$ref": "#/definitions/Object",
+          "additionalProperties": true
+        }
       }
     },
     "BatchConfigurationCollection": {
