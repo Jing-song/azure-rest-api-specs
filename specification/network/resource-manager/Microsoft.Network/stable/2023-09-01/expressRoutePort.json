@@ -1125,7 +1125,8 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/ExpressRouteLink"
-          }
+          },
+          "x-ms-identifiers": ["name"]
         },
         "circuits": {
           "readOnly": true,
