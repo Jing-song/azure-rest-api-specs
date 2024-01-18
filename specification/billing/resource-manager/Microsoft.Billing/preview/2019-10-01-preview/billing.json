@@ -3444,6 +3444,9 @@
             "$ref": "#/parameters/invoiceSectionNameParameter"
           },
           {
+            "$ref": "#/parameters/apiVersionParameter"
+          },
+          {
             "name": "parameters",
             "in": "body",
             "required": true,
@@ -3782,6 +3785,9 @@
             "$ref": "#/parameters/transferNameParameter"
           },
           {
+            "$ref": "#/parameters/apiVersionParameter"
+          },
+          {
             "name": "parameters",
             "in": "body",
             "required": true,
@@ -3897,6 +3903,9 @@
         "parameters": [
           {
             "$ref": "#/parameters/transferNameParameter"
+          },
+          {
+            "$ref": "#/parameters/apiVersionParameter"
           }
         ],
         "responses": {
@@ -3927,6 +3936,11 @@
             "$ref": "./examples/ListRecipientTransfers.json"
           }
         },
+        "parameters": [
+          {
+            "$ref": "#/parameters/apiVersionParameter"
+          }
+        ],
         "responses": {
           "200": {
             "description": "List of transfers received by caller.",
